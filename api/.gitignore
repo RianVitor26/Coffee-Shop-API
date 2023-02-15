@@ -32,3 +32,6 @@ build/
 ### VS Code ###
 vscode
 .vscode/
+
+### env
+api\src\main\resources\application.properties

@@ -8,7 +8,7 @@ import jakarta.persistence.GenerationType;
 import nonapi.io.github.classgraph.json.Id;
 
 @EntityScan
-public class Users {
+public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;

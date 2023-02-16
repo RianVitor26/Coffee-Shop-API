@@ -1,13 +1,12 @@
 package com.br.api.models;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import nonapi.io.github.classgraph.json.Id;
+import javax.persistence.Entity;
 
-@EntityScan
+@Entity
 public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

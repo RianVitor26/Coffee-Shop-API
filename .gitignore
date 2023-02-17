@@ -24,3 +24,7 @@ hs_err_pid*
 
 #env
 ./src/main/resources/application.properties
+
+#config
+vscode
+

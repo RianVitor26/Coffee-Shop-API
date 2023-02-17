@@ -34,4 +34,4 @@ vscode
 .vscode/
 
 ### env
-api\src\main\resources\application.properties
+*.properties

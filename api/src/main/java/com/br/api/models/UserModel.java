@@ -1,25 +1,40 @@
 package com.br.api.models;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import nonapi.io.github.classgraph.json.Id;
+import jakarta.persistence.Id;
 
 
+
+@Table(name = UserModel.TABLE_NAME)
 @Entity
 public class UserModel {
+
+    public static final String TABLE_NAME = "users";
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @Column(name = "id", unique = true)
     private Long id;
 
-    @Column(nullable = false)
+    @Size(min = 2, max = 100)
+    @NotBlank
+    @Column(nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false)
+    @Size(min = 2, max = 100)
+    @NotBlank
+    @Column(nullable = false, unique = true, length = 100)
     private String email;
 
-    @Column(nullable = false)
+    @Size(min = 2, max = 100)
+    @NotBlank
+    @Column(nullable = false, length = 100)
     private String password;
 
     public Long getId() {

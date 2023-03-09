@@ -91,5 +91,4 @@ public class CoffeeController {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error updating user", e);
         }
     }
-
 }
